@@ -1,0 +1,144 @@
+ body {
+  margin: 0px;
+  display: flex;
+  height: 100vh;
+}
+
+.flex-container {
+  margin:10px;
+  padding:5px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   border-radius: 8px;
+}
+
+.left-box,
+.right-box {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #a0a0a0;
+}
+
+
+
+video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+/* -----------right-box --------*/
+
+.right-box {
+  background-color: #c0c0c0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 100%; 
+}
+
+
+
+.form-container button {
+  padding: 8px 16px; 
+  font-size: 14px; 
+  max-width: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-container {
+  
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fffcfc;
+ 
+  
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-container input {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.form-container select {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.switch-form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+/* new------------------------------- */
+
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(20, 5, 73);
+  z-index: 2;
+  
+  font-size: 3dvw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px #ffffff;
+  white-space:wrap;
+  overflow: hidden;
+  animation: typewriter 2s steps(40) forwards;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+/* ------------responsive-------------------------- */
+@media screen and (max-width: 425px) {
+  
+  .flex-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+}
