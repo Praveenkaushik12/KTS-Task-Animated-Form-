@@ -14,6 +14,18 @@
    border-radius: 8px;
 }
 
+ h1{
+  font-size: 50px;
+  z-index: 1;
+  animation: moveUp 2s ease-out ;
+}
+
+p{
+  font-size: 20px;
+  z-index: 1;
+  animation: moveUp 4s ease-out ;
+}
+
 .left-box,
 .right-box {
   flex: 1;
@@ -70,6 +82,17 @@ video{
     transform: rotate(360deg);
   }
 }
+@keyframes moveUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
 
 .form-container {
   
@@ -118,18 +141,7 @@ video{
   
   font-size: 3dvw;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 2px 2px 4px #ffffff;
-  white-space:wrap;
-  overflow: hidden;
-  animation: typewriter 2s steps(40) forwards;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  
 }
 
 
